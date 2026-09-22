@@ -14,8 +14,10 @@ function App() {
 
   const fetchMuseums = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/museums");
-
+    const response = await fetch(
+  "https://fsd-practical-qqnx.onrender.com/api/museums"
+); 
+      
       if (!response.ok) {
         throw new Error("Failed to fetch museums");
       }
@@ -48,7 +50,7 @@ function App() {
     }
 
     try {
-      const response = await fetch("http://localhost:5000/api/museums", {
+      const response = await fetch("https://fsd-practical-qqnx.onrender.com/api/museums", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
